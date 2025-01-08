@@ -1,0 +1,37 @@
+<!-- 
+입력 상태 선택자
+
+<input> 태그의 특정 상태가 만족되면 선택합니다.
+
+<input> 태그의 상태      상세 설명
+:focus                  포커싱 되었을 때 선택
+:checked                체크박스에 체크가 되면 선택
+:disabled               비활성화 상태면 선택
+:enabled                활성화 상태면 선택
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력 상태 선택자</title>
+  <style>
+    .username {
+        border: 2px solid royalblue;
+        outline: none;
+        padding: 5px 10px;
+    }
+
+    .username:focus {
+        border-color: green;
+    }
+  </style>
+  <style>
+
+  </style>
+</head>
+<body>
+  <input class="username" type="text" placeholder="아이디를 입력하세요">
+</body>
+</html>
