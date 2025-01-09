@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color: black;
+    }
+
+		p + p {
+      color: red;
+    }
+    
+    /* p + p + span {
+      color: purple;
+    }
+
+    p + p + span + p {
+      color: aquamarine;
+    } */
+
+    p ~ span {
+      color: green;
+    }
+
+    /* span ~ p {
+      color: orange;
+    } */
+
+  </style>
+</head>
+<body>
+
+  <span>0</span> 
+
+  <p>1</p>
+
+  <p>2</p>
+
+  <span>3</span>
+
+  <p>4</p>
+
+  <div class="box">
+    <p>5</p>
+  </div>
+
+  <article>기사</article>
+
+  <ul>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+
+  <span>9</span>
+
+  <p>10</p>
+</body>
+</html>
+
+<!-- 
+`0` : black ⇒ 전체 선택자(*)
+
+`1` : black ⇒ 전체 선택자(*)
+
+`2` : red ⇒ 인접 형제 결합자 (p 의 형제 요소 중 p 바로 뒤에 위치하는 p 요소를 선택)
+
+`3` : green ⇒ 일반 형제 결합자 (p 요소의 형제 요소 중에서 p 요소 뒤에 위치하는 span 요소를 모두 선택)
+
+`4` : black ⇒ 전체 선택자(*)
+
+`5` : black ⇒ 전체 선택자(*)
+
+`기사` : black ⇒ 전체 선택자(*)
+
+`6` ~ `8`: black ⇒ 전체 선택자(*), 인접 형제 결합자가 적용되지 않음, article이 .box 바로 뒤에 위치하여 무효
+
+`9` : green ⇒ 일반 형제 결합자 (p 요소의 형제 요소 중에서 p 요소 뒤에 위치하는 span 요소를 모두 선택) 
+-->

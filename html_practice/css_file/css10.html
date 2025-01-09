@@ -1,0 +1,37 @@
+<!-- 
+ `인접` 형제 선택자
+
+`+`를 사용하여 바로 다음에 위치하는 형제를 선택합니다.
+
+`일반` 형제 선택자
+
+`~`를 사용하여 같은 깊이에 있는 형제들을 선택합니다. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>형제 선택자</title>
+  <style>
+    .first + p {
+      color: royalblue;
+    }
+
+    .first ~ p {
+          border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <p class="first">1</p>
+    <p class="second">2</p>
+    <p class="third">3</p>
+    <div>
+      <p class="fourth">4</p>
+    </div>
+    <p class="fifth">5</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일치 선택자</title>
+  <style>
+    li.second {
+      color: crimson;
+    }
+
+    li#third {
+          color: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <ul class="parent">
+    <li class="first">1</li>
+    <li class="second">2</li>
+    <li id="third">3</li>
+    <li class="fourth">4</li>
+  </ul>
+</body>
+</html>
+
+<!-- 일치 선택자
+태그와 해당하는 클래스, 아이디가 공백 없이 이어지며 두 조건이 모두 만족되었을 경우만 선택합니다. -->
