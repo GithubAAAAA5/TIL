@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 설정하기</title>
+</head>
+<style>
+
+
+  /* 
+  contain                   비율을 유지하며 최대한 영역 안에 담기도록 지정
+  cover                     비율을 유지하며 최대한 영역을 덮도록 지정
+
+  contain 의 경우 원본의 비율을 유지하면서 이미지가 박스 안에 최대한 크게 
+  그리고 전체가 잘리는 부분 없이 온전히 담기도록 지정된다.
+  그러므로 contain 은 항상 박스의 크기보다 작거나 같다.
+  cover 의 경우 비율을 유지하되 빈 공간이 남지 않게끔 지정된다.
+  비율을 유지하면서 전체를 덮도록 지정되기때문에 잘리는 부분이 생길 수 있다.
+
+  단위값 auto (auto 단위값)   너비(높이)를 단위 값으로 지정
+  단위값 단위값 (100% 256px)  공백으로 구분하여 너비와 높이 순으로 지정 
+  */
+
+  .boxsize1 {
+  border: 1px solid black;
+  width: 256px;
+  height: 256px;
+  background-image: url(../Image_file/test_img2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  }
+
+  .boxsize2 {
+  border: 1px solid black;
+  width: 256px;
+  height: 256px;
+  background-image: url(../Image_file/test_img2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .boxsize3 {
+  border: 1px solid black;
+  width: 256px;
+  height: 256px;
+  background-image: url(../Image_file/test_img2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+
+  
+
+</style>
+<body>
+  <div class="boxsize1"></div>
+  
+  <div class="boxsize2"></div>
+  
+  <div class="boxsize3"></div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 설정하기</title>
+  <style>
+
+    /* 
+    background-repeat
+    배경 이미지가 정확히 규격에 맞지 않는 경우, 반복되는 성질에 관한 설정
+    */
+
+    .box1 {
+      border: 1px solid black;
+      width: 256px;
+      height: 256px;
+      background-image: url(../Image_file/newyork.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .box2 {
+      border: 1px solid black;
+      width: 256px;
+      height: 256px;
+      background-image: url(../Image_file/newyork.jpg);
+      background-size: contain;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>

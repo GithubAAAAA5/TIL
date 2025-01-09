@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 설정하기</title>
+  <style>
+  
+  /* 
+  Content-Box
+
+  패딩을 제외한 순수한 콘텐츠 영역을 박스의 크기로 설정
+  기본적으로 100px * 100px의 콘텐츠 영역은 유지하되, 
+  이후 패딩 및 테두리의 두께에 따라 박스의 총 크기가 변화
+  */
+
+    .content-box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      background-color: aquamarine;
+      box-sizing: content-box;
+    }
+
+/* 
+Border-Box
+
+콘텐츠 영역부터 테두리를 포함한 곳까지를 박스의 크기로 설정.
+박스 크기는 테두리까지의 크기로 제한되며, 콘텐츠 영역은 테두리와 패딩을 제외한 나머지 
+*/
+
+    .border-box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-box"></div>
+  <br>
+  <div class="border-box"></div>
+</body>
+</html>

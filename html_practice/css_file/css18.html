@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 설정하기</title>
+  <style>
+
+    .box1 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      background-color: greenyellow;
+    }
+
+    .box2 {
+      width: 256px;
+      height: 256px;
+      background-image: url(../Image_file/dailyalgo_logo.png);
+    }
+
+    section {
+      display: flex;
+    }
+
+    /* section div 로 설정하면 section 안에 있는 div 만 설정할 수 있다. */
+    section div {
+      background-image: url(../Image_file/dailyalgo_logo.png);
+      margin: 10px;
+    }
+
+    .First {
+      width: 128px;
+      height: 128px;
+    }
+
+    .Second {
+      width: 256px;
+      height: 256px;
+    }
+
+    .Third {
+      width: 512px;
+      height: 512px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="box1">
+    Learn
+  </div>
+
+  <div class="box2">
+
+  </div>
+
+  <br>
+
+  <section>
+    <div class="First"></div>
+    <div class="Second"></div>
+    <div class="Third"></div>
+  </section>
+</body>
+</html>
