@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display_Block</title>
+  <style>
+/* 
+    Block 요소로 설정
+    <span> 태그는 원래 inline 요소이지만, block 요소로 변환 후 너비와 높이를 가질 수 있다. 
+*/
+
+    span {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+/* 
+    inline 요소로 설정
+    <div>태그는 원래 block 요소이지만, inline 요소로 변환 후 콘텐츠 영역에 한정하여 박스 크기가 줄었다.
+    행을 꽉 채우지 않고 요소 옆에 위치할 수 있게 되었다.
+*/
+
+    div {
+      display: inline;
+    }
+
+    div + div {
+      background-color: blue;
+    }
+
+    .inline-block {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      background-color: #12ff18;
+      display: inline-block;
+    }
+/* 
+    None
+    요소가 레이아웃에 영향을 주지 않도록 화면에서 보이지 않게 설정
+*/
+    .None1 {
+      width: 100px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 10px;
+      display: none;
+    }
+
+    .None2 {
+      width: 100px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+  
+/* 
+    Visible
+    요소가 보이게끔 설정, visible 이 기본설정값
+
+    Hidden 
+    요소를 보이지 않게 숨김
+    하지만 공간을 차지함 None과는 다름 None 은 공간도 차지하지않음
+*/
+
+
+    .Visible1 {
+      width: 100px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 10px;
+      visibility: hidden;
+    }
+
+    .Visible2 {
+      width: 100px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+/* 
+    opacity
+    박스의 투명도 설정 0(투명) 에서부터 1(불투명명) 사이의 값 
+*/
+
+    .icon1 {
+      width: 256px;
+      height: 256px;
+      background-image: url(../Image_file/dailyalgo_logo.png);
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .icon2 {
+      width: 256px;
+      height: 256px;
+      background-image: url(../Image_file/dailyalgo_logo.png);
+      display: inline-block;
+      opacity: 1;
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  <span>Block</span>
+
+  <br>
+
+  <div>inline</div>
+  <div>HTML/CSS</div>
+
+  <br>
+
+  <span class="inline-block">inlineblock</span>
+  <span class="inline-block">HTML/CSS</span>
+
+  <br>
+
+  <div class="None1">None</div>
+  <div class="None2">HTML/CSS</div>
+  
+  <br>
+
+  <div class="Visible1">Visible</div>
+  <div class="Visible2">HTML/CSS</div>
+
+  <br>
+
+  <div class="icon1"></div>
+  <div class="icon2"></div>
+
+  <br>
+</body>
+</html>

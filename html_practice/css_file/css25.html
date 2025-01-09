@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>외부 여백</title>
+  <style>
+/* 
+    margin 
+    테두리를 기준으로 바깥 4방향 (상, 하, 좌, 우) 의 간격을 설정할 수 있다.
+    margin 을 이용해 box들 간의 간격을 조정하여 레이아웃할 수 있다.
+*/
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .first {
+      margin-bottom: 10px;
+    }
+
+    /* first 상자를 기준으로 아래 10px 마진값 생김 */
+
+    /* margin auto를 활용하여 정렬하기 */
+    .parent {
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .child {
+      width: 100px;
+      height: inherit;
+      background-color: green;
+      margin-left: auto;
+    }
+
+    .parent2 {
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .child2 {
+      width: 100px;
+      height: inherit;
+      background-color: blue;
+      margin-right: auto;
+    }
+/* 
+    magin-left: auto; 와 magin-right: auto; 를 통해
+    마진을 브라우저가 자동으로 계산함.
+    이때 left 는 우측 마진이 0인 경우 나머지 모두를 지정하여 오른쪽으로 정렬.
+    right 는 좌측 마진이 0인 경우 나머지를 지정 하여 왼쪽으로 정렬된다. 
+
+    추가로 
+    margin-top      테두리 위쪽 간격 설정
+    margin-bottom   테두리 아래쪽 간격 설정
+    margin-left     테두리 왼쪽 간격 설정
+    margin-right    테두리 오른쪽 간격 설정
+*/
+
+
+    .margin1 {
+      margin-bottom: 10px;
+    }
+
+    .margin2 {
+      margin-top: 20px;
+    }
+
+/* 
+    margin 값을 위 객체에서 하단 10px 아래 객체에서 상단 20px 를 준 경우
+    합산하여 30px 의 마진값을 주는것이 아니라 더 큰쪽의 값에 작은 값이 흡수되어 20px이됨.
+*/
+
+  </style>
+</head>
+<body>
+
+  <div class="first">first</div>
+
+  <div>HTML/CSS</div>
+
+  <br>
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+
+  <br>
+
+  <div class="parent2">
+    <div class="child2"></div>
+  </div>
+
+  <div class="margin1">margin1</div>
+  <div class="margin2">margin2</div>
+</body>
+</html>
