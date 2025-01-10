@@ -1,0 +1,53 @@
+<!-- 
+Absolute 활용 
+다른 배치 방식에 비하여 자유도가 높다.
+일반적인 레이아웃으로 해결하기 어려운 배치에 사용하며, 가급적 최후의 수단으로 사용하는것이 권장된다.
+
+Z-index
+레이어들의 Z축 배치 우선순위를 결정한다
+음수부터 양수 값이 모두 가능하며 숫자가 클수록 더 위에 배치되게 된다.
+z-index 를 설정하지 않았다면 0과 같다.
+주의해야할 점은 부모 요소의 값이 작으면 자식의 값이 높더라도 
+부모요소의 배치 순서를 따르게 되며 부모 요소 이상 레벨의 요소들보다 우선할 수 없다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      position: absolute;
+    }
+
+    .first {
+      background-color: #12ff18;
+      z-index: 20;
+    }
+
+    .second {
+      background-color: black;
+      top: 30px;
+      left: 30px;
+      z-index: 10;
+    }
+
+    .third {
+      background-color: transparent;
+      top: 50px;
+      left: 50px;
+      z-index: 30;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="first">first</div>
+  <div class="second">second</div>
+  <div class="third">third</div>
+</body>
+</html>

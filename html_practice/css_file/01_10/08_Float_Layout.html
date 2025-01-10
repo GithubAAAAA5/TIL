@@ -1,0 +1,52 @@
+<!-- 
+Float
+
+left      요소를 왼쪽으로 띄움
+right     요소를 오른쪽으로 띄움
+none      기본값
+
+Float 해제하기
+clear 속성을 활용하여 float 레이아웃을 해제할 수 있다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    img {
+      float: left;
+      margin: 10px;
+    }
+
+      section::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+  </style>
+</head>
+<body>
+  <section>
+    <img src="../../Image_file/dailyalgo_logo.png">
+    <span>Lorem ipsum dolor sit amet consectetur, 
+      adipisicing elit. Cupiditate repellat ipsa alias accusamus 
+      explicabo nobis impedit perspiciatis officia vel repellendus? 
+      Earum voluptate repellendus aliquid asperiores! 
+      Maiores quasi quos laudantium nemo voluptatibus facilis 
+      autem aliquam deleniti maxime itaque voluptates ullam ipsam 
+      consequuntur provident ab, sed natus quas dolorum odio officiis 
+      soluta doloribus. Et eum minima quibusdam veniam ullam fuga nam 
+      cumque magni earum sunt ex, laboriosam, dolorum, neque dolore! 
+      Quaerat magnam enim perspiciatis, adipisci quidem dolorem minima 
+      odit tempore commodi nemo fugit consequuntur est rerum numquam 
+      culpa dolorum natus ad saepe voluptate aut qui fuga voluptas hic. 
+      Voluptas alias magni ullam?</span>
+  </section>
+    <h1>Learn HTML/CSS</h1>
+
+</body>
+</html>

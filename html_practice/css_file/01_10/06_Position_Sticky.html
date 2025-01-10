@@ -1,0 +1,81 @@
+<!-- 
+Sticky란
+요소를 특정 위치에 붙게 설정함.
+어떤 요소를 sticky 로 지정하면, 자동적으로 부모 요소는 sticky container 가 된다.
+sticky item 은 부모 요소 안에서 부유하며, 부모 요소의 밖으로 벗어날 수 없다.
+
+기본적으로 요소 흐름을 방해하지 않는 static 위치에 있되, 스크롤 위치가 해당 요소에 도달하면 
+미리 지정해 둔 offset 범위 만큼 띄워진 채로 fixed 처럼 동작한다.
+
+top       위쪽으로부터 특정 단위만큼 위치
+bottom    아래쪽으로부터 특정 단위만큼 위치
+left      왼쪽으로부터 특정 단위만큼 위치
+right     오른쪽으로부터 특정 단위만큼 위치
+
+sticky 속성을 활용하여, 스크롤을 내려도 붙어있는 내비게이션 바 등을 제작할 수 있다.
+
+주의할 점은 , sticky 는 기본적인 요소의 흐름을 따르지 않고 뷰포트 기준으로 절대적으로 띄워지는 
+fixed 와 다르게 sticky container 밖을 벗어날 수 없다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="_reset.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .navigation {
+      background-color: aquamarine;
+      position: sticky;
+      top: 0;
+    }
+
+    .parent {
+          margin: 20px;
+          border: 2px solid black;
+          height: 100vh;
+    }
+
+    .sticky {
+          display: inline-block;
+          background-color: red;
+          position: sticky;
+          margin-top: 200px;
+          top: 100px;
+          left: 200px;
+    }
+
+    .fixed {
+          position: fixed;
+          top: 100px;
+          left: 300px;
+          background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navigation">
+    <h1>Navigation Bar</h1>
+  </nav>
+
+  <h3 class="fixed">Fixed</h3>
+
+  <div class="parent">
+    <h2>First Box</h2>
+    <h3 class="sticky">Sticky</h3>
+  </div>
+
+  <div class="parent">
+    <h2>Second Box</h2>
+    <h3 class="sticky">Sticky</h3>
+  </div>
+  
+  <div class="parent">
+    <h2>Third Box</h2>
+  </div>
+
+</body>
+</html>

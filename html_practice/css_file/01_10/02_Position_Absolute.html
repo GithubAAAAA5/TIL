@@ -1,0 +1,42 @@
+<!-- 
+Absolute 란
+Static이 아닌 (relative, absolute, Fixed) 부모 요소를 기준으로 배치한다.
+만약 부모 요소가 static 이라면 static이 아닌 부모 요소를 계속 올라가 찾고, 그 요소를 기준으로 배치된다.
+부모 요소들이 모두 static 인 경우 브라우저 화면 자체를 기준으로 배치된다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .parent {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+  }
+
+  .child {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: #12ff18;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  </style>
+</head>
+<body>
+  
+  <div class="parent">
+    <span>부모</span>
+    <div class="child">
+      <span>자식</span>
+    </div>
+  </div>
+
+</body>
+</html>
