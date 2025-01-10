@@ -1,0 +1,85 @@
+<!-- 
+justify content 를 활용하여 요소들을 정렬할 수 있다.
+
+flex-start          기본값, 시작점부터 정렬.
+center              중앙 정렬.
+flex-end            끝점부터 정렬.
+space-between       요소를 최대한 균등하게 서로로부터 멀어지게 정렬.
+space-around        요소들의 여백을 동일하게 설정.
+space-evenly        컨테이너 및 요소들 간의 간격을 균등하게 정렬.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+    img {
+      width: 300px;
+      height: 150px;
+    }
+
+    .button-wrap {
+      display: flex;
+    }
+
+    .button-wrap button {
+      margin: 10px;
+    }
+
+    .flexbox2 {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+    .flexbox3 {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="flexbox">
+    <img src="../../Image_file/nodecrew1.png" />
+    <div class="button-wrap">
+      <button>메뉴</button>
+      <button>로그인</button>
+    </div>
+  </nav>
+
+  <br>
+
+  <nav class="flexbox2">
+    <img src="../../Image_file/nodecrew2.png" />
+    <div class="button-wrap">
+      <button>메뉴</button>
+      <button>로그인</button>
+    </div>
+  </nav>
+
+  <br>
+
+  <nav class="flexbox3">
+    <img src="../../Image_file/nodecrew2.png" />
+    <div class="button-wrap">
+      <button>메뉴</button>
+      <button>로그인</button>
+    </div>
+  </nav>
+
+</body>
+</html>

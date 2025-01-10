@@ -1,0 +1,60 @@
+<!-- 
+align-items
+교차 축의 요소가 한 줄인 경우 align-items 를 사용하여 정렬한다
+
+stretch         기본값, 요소가 교차 축을 최대한 늘려서 채움.
+flex-start      시작점부터 정렬.
+center          중앙 정렬.
+flex-end        끝점부터 정렬.
+baseline        요소들의 글씨의
+
+정중앙 정렬하기
+justify-content : center 와 align-items : center 를 활용하여 요소를 정중앙 정렬할 수 있다.
+
+align-content 
+교차 축의 요소들이 두 줄 이상인 경우 align-content 를 사용하여 정렬한다.
+stretch           기본값, 요소들이 교차 축을 최대한 채우도록 정렬.
+flex-start        시작점부터 정렬.
+center            중앙 정렬.
+flex-end          끝점부터 정렬.
+space-between     요소를 최대한 균등하게 서로로부터 멀어지게 정렬.
+space-around      요소들의 여백을 동일하게 설정.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .flexbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      width: 200px;
+      height: 200px;
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    .alignimg {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flexbox">
+    <span class="flex-item">Learn HTML/CSS</span>
+  </div>
+
+  <img class="alignimg" src="../../Image_file/align-item.png">
+
+  <img class="alignimg" src="../../Image_file/align-item2.png">
+</body>
+</html>

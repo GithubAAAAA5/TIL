@@ -1,0 +1,42 @@
+<!-- 
+Flexbox Layout
+Flex Container 속성성
+flex-direction
+기본 축 설정을 할 수 있다. 
+row               기본값으로, 주축을 행으로 설정.
+row-reverse       행을 주축으로, 오른쪽부터 쌓이게 설정.
+column            주축을 열로 설정.
+column-reverse    열을 주축으로, 아래쪽부터 쌓이게 설정.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .flexbox {
+          display: flex;
+          flex-direction: column-reverse;
+          border: 1px solid black;
+          padding: 10px;
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flexbox">
+    <span class="flex-item">Learn</span>
+    <span class="flex-item">HTML</span>
+    <div class="flex-item">CSS</div>
+  </div>
+</body>
+</html>

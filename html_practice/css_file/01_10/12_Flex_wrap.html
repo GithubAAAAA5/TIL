@@ -1,0 +1,94 @@
+<!-- 
+flex-wrap
+flex item 의 줄바꿈 설정
+
+wrap            줄바꿈을 통해 담기게 설정.
+nowrap          가능한 한 한 줄에 넣고, 불가능한 경우 넘치게 설정.
+wrap-reverse    역방향으로 한 줄에 담기게 설정.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .flexbox {
+      display: flex;
+      border: 1px solid black;
+      padding: 10px;
+      flex-wrap: wrap;
+      /* width: 600px; */
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+    .flexbox2 {
+      display: flex;
+      border: 1px solid black;
+      padding: 10px;
+      flex-wrap: wrap-reverse;
+      width: 600px;
+    }
+
+    .flex-item2 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+
+    .flexbox3 {
+      display: flex;
+      border: 1px solid black;
+      padding: 10px;
+      flex-wrap: nowrap;
+      width: 600px;
+    }
+
+    .flex-item3 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="flexbox">
+    <span class="flex-item">1</span>
+    <span class="flex-item">2</span>
+    <div class="flex-item">3</div>
+    <span class="flex-item">4</span>
+    <span class="flex-item">5</span>
+    <div class="flex-item">6</div>
+  </div>
+
+  <div class="flexbox2">
+    <span class="flex-item2">1</span>
+    <span class="flex-item2">2</span>
+    <div class="flex-item2">3</div>
+    <span class="flex-item2">4</span>
+    <span class="flex-item2">5</span>
+    <div class="flex-item2">6</div>
+  </div>
+
+  <div class="flexbox3">
+    <span class="flex-item3">1</span>
+    <span class="flex-item3">2</span>
+    <div class="flex-item3">3</div>
+    <span class="flex-item3">4</span>
+    <span class="flex-item3">5</span>
+    <div class="flex-item3">6</div>
+  </div>
+</body>
+</html>
