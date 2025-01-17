@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #333;">
+    <button id="my-button" style="
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      border: 8px solid #750000;
+      background: radial-gradient(circle at 30% 30%, #ff0000, #d00000);
+      color: white;
+      font-size: 100px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 
+        0 0 20px #ff0000,
+        inset 0 0 15px rgba(255,255,255,0.3);
+      text-shadow: 0 0 5px rgba(255,255,255,0.5);
+      position: relative;
+      transition: all 0.3s ease;
+    ">Do Not Push The Button</button>
+
+    <script>
+      const btn = document.querySelector('#my-button');
+      let clickCount = 0;
+      
+      btn.addEventListener('click', function() {
+        clickCount++;
+        
+        if (clickCount === 1) {
+          alert('경고: 이 버튼은 누르면 안됩니다!');
+          btn.style.boxShadow = '0 0 30px #ff0000, inset 0 0 20px rgba(255,255,255,0.4)';
+        } else if (clickCount === 2) {
+          alert('마지막 경고입니다!');
+          btn.style.animation = 'pulse 1s infinite';
+        } else {
+          alert('이런... 당신이 해냈군요...');
+          document.body.style.backgroundColor = '#ff0000';
+          btn.style.transform = 'scale(1.5)';
+          setTimeout(() => {
+            document.body.style.backgroundColor = '#000';
+            btn.style.backgroundColor = '#000';
+            btn.textContent = 'OH Shee...';
+            btn.disabled = true;
+          }, 1000);
+        }
+      });
+    </script>
+
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+    </style>
+  </body>
+</html>
