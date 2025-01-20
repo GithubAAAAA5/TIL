@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 번호 생성기</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <style>
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .numbers {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+        .number {
+            width: 50px;
+            height: 50px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>로또 번호 생성기</h1>
+        <div class="numbers" id="numberContainer"></div>
+        <button onclick="generateNumbers()">번호 뽑기</button>
+    </div>
+
+    <script>
+        function generateNumbers() {
+            const numbers = _.range(1, 46);
+            const lottoNums = _.sampleSize(numbers, 6).sort((a, b) => a - b);
+            
+            const container = document.getElementById('numberContainer');
+            container.innerHTML = '';
+            
+            for (let num of lottoNums) {
+                const div = document.createElement('div');
+                div.className = 'number';
+                div.textContent = num;
+                container.appendChild(div);
+            }
+        }
+
+        // 페이지 로드 시 첫 번호 생성
+        generateNumbers();
+    </script>
+</body>
+</html>

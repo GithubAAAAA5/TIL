@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <h2>수동 카운터</h2>
+    <p class="p1">0</p>
+    <button class="btn">하나씩 카운트!</button>
+    <button class="btn2">마이너스</button>
+    <button class="btn3">Reset</button>
+    <button class="btn4">2곱</button>
+    <hr />
+    <!-- 2 -->
+    <!-- <h2>자동 카운터</h2>
+    <p class="p2">0</p>
+    <span>10이 되면 멈춥니다!</span> -->
+
+    <script>
+
+			const btn = document.querySelector(".btn")
+      const btn2 = document.querySelector(".btn2")
+      const btn3 = document.querySelector(".btn3")
+      const btn4 = document.querySelector(".btn4")
+      const p1 = document.querySelector('.p1')
+
+      btn.addEventListener('click', function (event) {
+        let cnt = parseInt(p1.innerText)
+        cnt++
+        p1.innerText = cnt
+        // console.log(p1.innerText)
+      })
+
+      btn2.addEventListener('click', function (event) {
+        let cnt = parseInt(p1.innerText)
+        cnt--
+        p1.innerText = cnt
+      })
+
+      btn3.addEventListener('click', function (event) {
+        p1.innerText = 0;
+      })
+
+      btn4.addEventListener('click', function (event) {
+        let cnt = parseInt(p1.innerText)
+        cnt = cnt*2
+        p1.innerText = cnt
+        // console.log(p1.innerText)
+      })
+
+    </script>
+  </body>
+</html>

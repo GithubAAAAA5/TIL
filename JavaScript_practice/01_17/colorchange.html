@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="./colors.css">
+</head>
+
+<body>
+  <ul class="switcher">
+    <li id="greenButton"></li>
+    <li id="blueButton"></li>
+    <li id="redButton"></li>
+  </ul>
+
+  <h1>Theme Switcher</h1>
+
+  <p>테마를 바꿔봅시다.</p>
+
+  <script>
+
+
+    const body = document.querySelector('body')
+    const greenBtn = document.querySelector('#greenButton')
+    const blueBtn = document.querySelector('#blueButton')
+    const redBtn = document.querySelector('#redButton')
+
+    greenBtn.addEventListener('click', function () {
+      body.style.backgroundColor = 'green'
+      body.style.color = 'white'
+    })
+
+    blueBtn.addEventListener('click', function () {
+      body.style.backgroundColor = 'blue'
+      body.style.color = 'white'
+    })
+
+    redBtn.addEventListener('click', function () {
+      body.style.backgroundColor = 'red'
+      body.style.color = 'white'
+    })
+
+    
+  </script>
+</body>
+
+</html>
